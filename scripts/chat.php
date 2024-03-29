@@ -1,7 +1,15 @@
 <?php
 
-$message = $_POST['message'];
-$file = '../data/messages.txt';
-file_put_contents($file, "{$message}\n", FILE_APPEND);
-echo $message;
+$jsonData = file_get_contents('php://input');
+$data = json_decode($jsonData, true);
+
+$username = $data["username"];
+$message = $data["message"];
+$date = $data["date"];
+
+$log = "[$date] $username: $message";
+
+$file = "../data/$username.txt";
+file_put_contents($file, "{$log}\n", FILE_APPEND);
+echo $log;
 
