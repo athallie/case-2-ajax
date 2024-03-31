@@ -11,6 +11,11 @@ if (!file_exists($users)) {
     fopen($users, "w");
 }
 
-file_put_contents($users, $username . ",", FILE_APPEND);
+$existingUsernames = file($users, FILE_IGNORE_NEW_LINES);
 
-echo 'Username created succesfully';
+if (in_array($username, $existingUsernames)) {
+    echo 'Username already exists';
+} else {
+    file_put_contents($users, $username . "\n", FILE_APPEND);
+    echo 'Username created succesfully';
+}
