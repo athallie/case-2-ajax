@@ -50,13 +50,24 @@ submitUsernameButton.addEventListener('click', (e) => {
     }))
 });
 
-/*let lastModified = 0;
-setInterval(checkForMessages, 1000);*/
 
 
-/*
-* Send Message
-* */
+//ADAM
+function readChat() {
+    fetch(`/scripts/sent.php`)
+        .then((res) => res.text())
+        .then((res) => {
+            let chatbox = document.querySelector('#chatbox');
+            chatbox.innerHTML = res;
+        });
+    setTimeout(readChat, 1000);
+}
+readChat();
+
+
+
+//Send Message
+
 let sendButton = document.querySelector('button#send-chat');
 sendButton.addEventListener('click', (e) => {
     let formData = {
@@ -73,51 +84,9 @@ sendButton.addEventListener('click', (e) => {
                 'Content-Type':'application/json',
             },
             body: JSON.stringify(formData)
-        }
-    ).then((response) => {
-        response.json().then((response) => {
-                console.warn(JSON.stringify(response));
-                let chatbox = document.querySelector('#chatbox');
-                fetch(
-                    `/data/${sessionUsername}.txt`
-                ).then(
-                    response => {
-                        return response.text();
-                    }
-                )/*.then(
-                    data => {
-                        displayMessage(chatbox, data);
-                    }
-                )*/
-        });
+        }).then((data) => {
+        console.log(data);
+        document.querySelector('input[name="message"]').value = "";
     })
 });
-
-/*function checkForMessages() {
-    let chatbox = document.querySelector('#chatbox');
-    fetch(
-        `/data/${sessionUsername}.txt`
-    ).then(
-        response => {
-            let lastModifiedHeader = response.headers.get('Last-Modified');
-            if (lastModifiedHeader && new Date(lastModifiedHeader) > lastModified) {
-                lastModified = new Date(lastModifiedHeader).getTime();
-                return response.text();
-            } else {
-                return Promise.reject("No new messages.");
-            }
-        }
-    ).then(
-        data => {
-            displayMessage(chatbox, data);
-        }
-    )
-}
-
-function displayMessage(chatbox, data) {
-    const messages = data.split('\n');
-    const latestMessage = messages[messages.length - 2];
-    let cell0 = chatbox.insertRow().insertCell(0);
-    cell0.textContent = latestMessage;
-}*/
 
