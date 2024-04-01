@@ -13,6 +13,6 @@ if (!file_exists($profilePics)) {
 }
 
 move_uploaded_file($tmp, $pics);
-file_put_contents($profilePics, $picName . ",");
+file_put_contents($profilePics, $picName . "\n");
 
-echo "Image Uploaded : $picName";
+echo $picName;

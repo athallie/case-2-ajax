@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="../styles/styling_profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-icon">
+            <img src="https://i.pinimg.com/736x/dc/07/1b/dc071bab6346c289d1a71366e052b76d.jpg" 
+            alt="Chat Icon" 
+            id="chat-icon">
+        </div>
+
+        <div class="user-profile-box" id="user-profile-box">
+            <div class="user-profile-box-header">
+                <img src="https://i.pinimg.com/736x/41/5a/fa/415afa083c48a3e6dbec057850f03250.jpg" 
+                id="chat-box-logo-white">
+                <h2 id="text-header">User Profile</h2>
+            </div>
+            <div class="user-profile-box-info">
+                <img src="https://i.pinimg.com/736x/a4/57/cd/a457cdeb4be20f3ec43643c57fc5f0c1.jpg" 
+                id="photo-profile">
+                <h5 id="username">Username</h5>
+            </div>
+            <div class="user-profile-box-change">
+                <form id="edit-profile-form">
+                    <label for="new-photo">Change Photo</label><br>
+                    <input type="file" id="new-photo" name="new-photo"><br>
+                    <label for="new-username">Change Username</label><br>
+                    <input type="text" id="new-username" name="new-username" 
+                    placeholder="Enter new username"><br>
+                    <button type="submit" id="save-button"><h5>Save</h5></button>
+                    <button type="button" id="back-button"><h5>Back to Chat</h5></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../scripts/profile.js"></script>
+</html>
