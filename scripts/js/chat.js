@@ -50,7 +50,7 @@ function ambilDataChat() {
 
 //ADAM
 /*function readChat() {
-    fetch(`/scripts/sent.php`)
+    fetch(`/scripts/php/sent.php`)
         .then((res) => res.text())
         .then((res) => {
             let chatbox = document.querySelector('#chatbox');
@@ -74,7 +74,7 @@ sendButton.addEventListener('click', (e) => {
     console.log(JSON.stringify(formData));
 
     fetch(
-        "/scripts/chat.php", {
+        "/scripts/php/chat.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/json',

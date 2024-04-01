@@ -22,7 +22,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
 
     /*Send username change*/
     fetch(
-        "/scripts/username.php", {
+        "/scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
@@ -37,7 +37,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
 
             /*Send profile picture to username.php for processing*/
             fetch(
-                "/scripts/profilepic.php", {
+                "/scripts/php/profilepic.php", {
                     method: "post",
                     body: formData
                 }
