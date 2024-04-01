@@ -1,0 +1,96 @@
+body{
+    background-color: #9BDBFF;
+    font-family: 'Segoe UI', sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+#chat-icon{
+    margin-top: 212.5px;
+    margin-left: 300px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;  
+}
+.user-profile-box{
+    margin-top: 2%;
+    width: 35%;
+    height: 90%;
+    position: fixed;
+    background-color: #fff;
+    right: 128px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Bayangan kotak chat */
+    z-index: 999; /* Pastikan chat box tampil di atas elemen lain */
+}
+.user-profile-box-header{
+    width: auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 5%;
+    color: #fff;
+    background-color: #3DADFF;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#chat-box-logo-white{
+    width: auto;
+    height: 40;
+    margin-right: 5%;
+}
+#text-header{
+    align-content: center;
+}
+.user-profile-box-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    align-items: center;
+}
+#photo-profile{
+    width: 80px;
+    height: 80px;
+    border-radius:50px;
+}
+.user-profile-box-change{
+    margin-left: 5%;
+    margin-top: 0%;
+
+}
+.user-profile-box-change label{
+    color: #413e3e;
+}
+.user-profile-box-change input{
+    border-color: #9d9d9d;
+}
+#new-username{
+    border-radius: 20px;
+}
+.user-profile-box-change button{
+    width: 140px;
+    height: 40px;
+    margin-bottom: 15px;
+    background-color: #3DADFF;
+    border: 0cm ;
+    border-radius: 10px;
+    color: #fff;
+    margin-top: 7%;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+#back-button{
+    background-color: #9d9d9d;
+}
+
+
