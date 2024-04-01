@@ -55,6 +55,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
                     console.warn('Picture: ' + picture);
                     let src = `/Kode/data/profile-pics/${picture}`;
                     changeImg(profilePic, src);
+                    location.reload();
                 })
             }))
         })
