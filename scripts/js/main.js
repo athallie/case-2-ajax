@@ -30,7 +30,7 @@ submitUsernameButton.addEventListener('click', (e) => {
 
     /*Send username to username.php for processing*/
     fetch(
-        "../php/username.php", {
+        "/Kode/scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
@@ -42,7 +42,7 @@ submitUsernameButton.addEventListener('click', (e) => {
             console.warn('Username: ' + username);
 
             /*Redirect to chat*/
-            window.location.href = '/Kode/pages/user_profile.html';
+            window.location.href = 'user_profile.html';
         })
     }))
 });

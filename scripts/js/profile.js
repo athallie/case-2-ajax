@@ -32,7 +32,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
 
     /*Send username change*/
     fetch(
-        "../scripts/php/username.php", {
+        "/Kode/scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
@@ -46,7 +46,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
             formData.append(newUsername, pictureInput.files[0]);
             /*Send profile picture to username.php for processing*/
             fetch(
-                "../scripts/php/profilepic.php", {
+                "/Kode/scripts/php/profilepic.php", {
                     method: "post",
                     body: formData
                 }
@@ -54,7 +54,6 @@ submitProfilePictureButton.addEventListener('click', (e) => {
                 response.text().then((picture) => {
                     console.warn('Picture: ' + picture);
                     let src = `/Kode/data/profile-pics/${picture}`;
-                    changeImg(profilePic, src);
                     location.reload();
                 })
             }))

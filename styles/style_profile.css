@@ -1,30 +1,30 @@
-body{
+body {
     background-color: #9BDBFF;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
-.container{
+.chat-container{
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set container height to viewport height */
 }
 #chat-icon{
-    margin-top: 212.5px;
-    margin-left: 300px;
     width: 100px;
     height: 100px;
     border-radius: 10px;
-    cursor: pointer;  
+    cursor: pointer;
+    margin-right: 100px;
 }
-.user-profile-box{
-    margin-top: 2%;
-    width: 35%;
-    height: 90%;
-    position: fixed;
+#user-profile-box{
+    width: 90%; /* Make chat box width 90% of the viewport */
+    max-width: 400px; /* Set maximum width */
     background-color: #fff;
-    right: 128px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Bayangan kotak chat */
-    z-index: 999; /* Pastikan chat box tampil di atas elemen lain */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
 }
 .user-profile-box-header{
     width: auto;
@@ -62,7 +62,6 @@ body{
 .user-profile-box-change{
     margin-left: 5%;
     margin-top: 0%;
-
 }
 .user-profile-box-change label{
     color: #413e3e;
@@ -76,21 +75,37 @@ body{
 .user-profile-box-change button{
     width: 140px;
     height: 40px;
+    margin-top: 7%;
+    margin-left: 30%;
     margin-bottom: 15px;
     background-color: #3DADFF;
     border: 0cm ;
     border-radius: 10px;
     color: #fff;
-    margin-top: 7%;
-    margin-left: 30%;
     display: flex;
-    flex-direction: row;
     align-items: center;
     cursor: pointer;
     justify-content: center;
 }
+#save-button :hover{
+    color: #064069;
+}
+#back-button :hover{
+    color: #413e3e;
+}
 #back-button{
     background-color: #9d9d9d;
 }
-
-
+@media screen and (max-width: 600px) {
+    .chat-container {
+        align-items: flex-start; /* Align items to the top */
+    }
+    #user-profile-box {
+        width: 90%; /* Make chat box width 90% of the viewport */
+        max-width: none; /* Remove max-width */
+        height: 90%; /* Adjust height for smaller screens */
+        overflow-y: auto; /* Add scroll if content exceeds height */
+        overflow-x: auto;
+        margin-left: 20px;
+    }
+}

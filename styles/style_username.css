@@ -1,0 +1,95 @@
+body {
+    background-color: #9BDBFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Set container height to viewport height */
+}
+
+#chat-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 100px;
+}
+
+#chat-box {
+    width: 90%; /* Make chat box width 90% of the viewport */
+    max-width: 400px; /* Set maximum width */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.chat-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    color: #413e3e;
+}
+
+#chat-box-logo {
+    width: 70px;
+    height: 56px;
+    margin-right: 5%;
+}
+
+.chat-box-form {
+    text-align: center;
+    padding: 15%;
+    color: #413e3e;
+}
+
+#username-input {
+    width: 90%; /* Make input width 90% of the parent */
+    max-width: 300px; /* Set maximum width */
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    border-color: #9d9d9d;
+}
+
+#start-chat-button {
+    width: 70%; /* Make button width 70% of the parent */
+    max-width: 140px; /* Set maximum width */
+    height: 40px;
+    margin-bottom: 15px;
+    background-color: #3DADFF;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+}
+#start-chat-button :hover{
+    color: #413e3e;
+}
+
+.chat-box-footer {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+/* Media Query for smaller screens */
+@media screen and (max-width: 600px) {
+    .chat-container {
+        align-items: flex-start; /* Align items to the top */
+    }
+    #chat-box {
+        width: 90%; /* Make chat box width 90% of the viewport */
+        max-width: none; /* Remove max-width */
+        height: 90%; /* Adjust height for smaller screens */
+        overflow-y: auto; /* Add scroll if content exceeds height */
+        overflow-x: auto;
+        margin-left: 20px;
+    }
+}
