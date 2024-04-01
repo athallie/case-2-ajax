@@ -1,7 +1,2 @@
+Tes
 Atha
-[object HTMLInputElement]
-Athallah
-Halo
-Tell
-Tella
-atha

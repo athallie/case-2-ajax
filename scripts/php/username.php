@@ -1,13 +1,13 @@
 <?php
 
 $username = $_POST['username'];
-$filename = "../data/$username.txt";
+$filename = "../../data/$username.txt";
 
 /*if (!file_exists($filename)) {
     fopen($filename, "w");
 }*/
 
-$users = "../data/users.txt";
+$users = "../../data/users.txt";
 if (!file_exists($users)) {
     fopen($users, "w");
 }

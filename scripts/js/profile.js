@@ -18,11 +18,16 @@ let submitProfilePictureButton = document.querySelector('button#save-button');
 submitProfilePictureButton.addEventListener('click', (e) => {
     let pictureInput = document.querySelector('input[type="file"]');
     let formData = new FormData();
-    let newUsername = document.querySelector('input[type="text"]').value;
+    let newUsername = null;
+    if (document.querySelector('input[type="text"]').value.trim() !== '') {
+        newUsername = document.querySelector('input[type="text"]').value;
+    } else {
+        newUsername = sessionStorage.getItem('username');
+    }
 
     /*Send username change*/
     fetch(
-        "/scripts/php/username.php", {
+        "../scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
@@ -34,10 +39,9 @@ submitProfilePictureButton.addEventListener('click', (e) => {
             console.warn('Username: ' + newUsername);
             sessionStorage.setItem("username", newUsername);
             formData.append(newUsername, pictureInput.files[0]);
-
             /*Send profile picture to username.php for processing*/
             fetch(
-                "/scripts/php/profilepic.php", {
+                "../scripts/php/profilepic.php", {
                     method: "post",
                     body: formData
                 }

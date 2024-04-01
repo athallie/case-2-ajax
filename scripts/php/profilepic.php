@@ -6,8 +6,8 @@ $picFile = $_FILES["$username"];
 $picName = $username . "." . pathinfo($picFile["name"], PATHINFO_EXTENSION);
 $tmp = $picFile["tmp_name"];
 
-$pics = "../data/profile-pics/$picName";
-$profilePics = "../data/profile-pics.txt";
+$pics = "../../data/profile-pics/$picName";
+$profilePics = "../../data/profile-pics.txt";
 if (!file_exists($profilePics)) {
     fopen($profilePics, "w");
 }
