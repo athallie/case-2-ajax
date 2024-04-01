@@ -1,3 +1,6 @@
+localStorage.getItem("profile-picture");
+let profilePic = document.querySelector("img#photo-profile");
+
 /*Clear session storage on reload*/
 window.addEventListener('load', (e) => {
     /*
@@ -9,6 +12,8 @@ window.addEventListener('load', (e) => {
     pictureForm.addEventListener('submit', (e) => {
         e.preventDefault();
     });
+
+    changeImg(profilePic, localStorage.getItem("profile-picture"));
 })
 
 /*
@@ -48,8 +53,8 @@ submitProfilePictureButton.addEventListener('click', (e) => {
             ).then((response => {
                 response.text().then((picture) => {
                     console.warn('Picture: ' + picture);
-                    let profilePic = document.querySelector("img#photo-profile");
-                    profilePic.src = `/Kode/data/profile-pics/${picture}`;
+                    let src = `/Kode/data/profile-pics/${picture}`;
+                    changeImg(profilePic, src);
                 })
             }))
         })
@@ -60,3 +65,8 @@ let backButton = document.querySelector("button#back-button");
 backButton.addEventListener("click", (e) => {
     window.history.back();
 })
+
+function changeImg(img, src) {
+    img.src = src;
+    localStorage.setItem("profile-picture", src);
+}
