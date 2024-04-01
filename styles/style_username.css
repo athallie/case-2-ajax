@@ -22,12 +22,15 @@ body {
 }
 
 #chat-box {
-    width: 90%; /* Make chat box width 90% of the viewport */
-    max-width: 400px; /* Set maximum width */
+/*    width: 90%; !* Make chat box width 90% of the viewport *!
+    max-width: 400px; !* Set maximum width *!*/
+    width: 100%;
+    padding: 3em;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    transition: transform 0.3s;
 }
 
 .chat-box-header {
@@ -51,8 +54,8 @@ body {
 }
 
 #username-input {
-    width: 90%; /* Make input width 90% of the parent */
-    max-width: 300px; /* Set maximum width */
+    width: 100%; /* Make input width 90% of the parent */
+    padding: 1em;
     height: 35px;
     margin-top: 10px;
     margin-bottom: 20%;
@@ -77,6 +80,36 @@ body {
 .chat-box-footer {
     text-align: center;
     margin-bottom: 5px;
+}
+
+#chat-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: ease-in-out 0.5s;
+}
+
+.fab {
+    align-items: center;
+    background-image: url("../assets/icon.jpg");
+    background-size: contain;
+    width: 3em;
+    height: 3em;
+    transition: ease-in-out 0.5s, transform 0.25s;
+}
+
+#fab-username:hover {
+    background-blend-mode: darken;
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+#outer-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Media Query for smaller screens */

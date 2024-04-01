@@ -11,33 +11,35 @@
 
 </head>
 <body>
-<div class="chat-container">
-    <div class="chat-icon">
-        <img src="assets/icon.jpg"
-             alt="Chat Icon"
-             id="chat-icon">
-    </div>
 
-    <div class="chat-box" id="chat-box">
-        <div class="chat-box-header">
-            <img src="assets/header-icon-black.jpg"
-                 id="chat-box-logo">
-            <h2>Chat-Box</h2>
-        </div>
+<div class="container-fluid" id="outer-container">
+    <button id="fab-username" class="chat-icon fab"></button>
 
-        <div class="chat-box-form">
-            <h5>Username</h5>
-            <form id="username-form">
-                <input id="username-input" type="text" placeholder="Enter username" name="username"><br>
-                <button id="start-chat-button" type="submit"><h5>Start Chat</h5></button>
-            </form>
-        </div>
+    <div id="chat-box-container" class="chat-container">
 
-        <div class="chat-box-footer">
-            <h7><b>Made by Kelompok 1</b></h7>
+        <div class="chat-box" id="chat-box">
+            <div class="chat-box-header">
+                <img src="assets/header-icon-black.jpg"
+                     id="chat-box-logo">
+                <h2>Chat-Box</h2>
+            </div>
+
+            <div class="chat-box-form">
+                <h5>Username</h5>
+                <form id="username-form">
+                    <input id="username-input" type="text" placeholder="Enter username" name="username"><br>
+                    <button id="start-chat-button" type="submit">Start Chat</button>
+                </form>
+            </div>
+
+            <div class="chat-box-footer">
+                <h7><b>Made by Kelompok 1</b></h7>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

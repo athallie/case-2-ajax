@@ -23,6 +23,9 @@ submitUsernameButton.addEventListener('click', (e) => {
     /*document.querySelector("button#send-chat").disabled = false;
     document.querySelector("button#submit-profile-pic").disabled = false;*/
     let usernameInput = document.querySelector('input[name="username"]').value;
+    if (usernameInput.trim() === "") {
+        usernameInput = "user" + Math.floor(Math.random() * 9000) + 1000;
+    }
 
     /*Store username in session storage*/
     sessionUsername = usernameInput;
@@ -45,4 +48,18 @@ submitUsernameButton.addEventListener('click', (e) => {
             window.location.href = 'user_profile.html';
         })
     }))
+});
+
+let fabUsername = document.querySelector("button#fab-username");
+let chatBox = document.querySelector("div#chat-box-container")
+fabUsername.addEventListener("click", (e) => {
+    if (chatBox.style.opacity === "1") {
+        chatBox.style.opacity = "0";
+        fabUsername.style.translate = "0em";
+        chatBox.style.translate = "0em"
+    } else {
+        chatBox.style.opacity = "1";
+        fabUsername.style.translate = "-1em";
+        chatBox.style.translate = "1em";
+    }
 });
