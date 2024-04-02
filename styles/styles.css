@@ -17,8 +17,8 @@
 
 #main-iframe {
     opacity: 0;
-    width: 25%;
-    height: 75%;
+    width: 20em;
+    height: 75vh;
     border: lightgray solid 1px;
     border-radius: 1em;
     box-shadow: 0 2px 8px lightslategray;
@@ -264,7 +264,8 @@
 }
 
 #chat-form {
-    width: 17em;
+    margin-left: 1em;
+    width: 20em;
     border-width: .08em;
     border-color: black;
     border-radius: 1em;
@@ -284,10 +285,9 @@
 }
 
 #chat-column {
-    margin-left: 1em;
     display: flex;
     width: 100%;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     padding: 0;
 }
