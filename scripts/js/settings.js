@@ -1,8 +1,7 @@
-localStorage.getItem("profile-picture");
 let profilePic = document.querySelector("img#photo-profile");
 
 /*Clear session storage on reload*/
-location.addEventListener('load', (e) => {
+window.addEventListener('load', (e) => {
     /*
     * Prevent default
     * */
@@ -54,6 +53,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
                 response.text().then((picture) => {
                     console.warn('Picture: ' + picture);
                     let src = `/data/profile-pics/${picture}`;
+                    localStorage.setItem("profile-picture", src);
                     location.reload();
                 })
             }))
