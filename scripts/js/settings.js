@@ -2,7 +2,7 @@ localStorage.getItem("profile-picture");
 let profilePic = document.querySelector("img#photo-profile");
 
 /*Clear session storage on reload*/
-window.addEventListener('load', (e) => {
+location.addEventListener('load', (e) => {
     /*
     * Prevent default
     * */
@@ -32,7 +32,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
 
     /*Send username change*/
     fetch(
-        "/Kode/scripts/php/username.php", {
+        "/scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
@@ -46,14 +46,14 @@ submitProfilePictureButton.addEventListener('click', (e) => {
             formData.append(newUsername, pictureInput.files[0]);
             /*Send profile picture to username.php for processing*/
             fetch(
-                "/Kode/scripts/php/profilepic.php", {
+                "/scripts/php/profilepic.php", {
                     method: "post",
                     body: formData
                 }
             ).then((response => {
                 response.text().then((picture) => {
                     console.warn('Picture: ' + picture);
-                    let src = `/Kode/data/profile-pics/${picture}`;
+                    let src = `/data/profile-pics/${picture}`;
                     location.reload();
                 })
             }))
@@ -69,4 +69,4 @@ backButton.addEventListener("click", (e) => {
 function changeImg(img, src) {
     img.src = src;
     localStorage.setItem("profile-picture", src);
-};
+}

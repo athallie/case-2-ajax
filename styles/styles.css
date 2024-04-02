@@ -6,6 +6,10 @@
     margin: 0;
 }
 
+body {
+    background-color: white;
+}
+
 #main-container {
     margin: 0;
     height: 100vh;
@@ -116,27 +120,23 @@
 
 /*settings.html*/
 #user-profile-box{
-    width: 50%;
-    height: 100vh;
-    padding: 1.5em;
+    width: 100%;
+    height: 100%;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
-.user-profile-box-header{
-    width: auto;
-    height: 40px;
+#user-profile-box-header{
+    width: 100%;
+    height: 4em;
     display: flex;
     flex-direction: row;
     justify-content: left;
     padding: 5%;
     color: #fff;
     background-color: #3DADFF;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-radius: 10px 10px 0 0;
 }
 
 #chat-box-logo-white{
@@ -149,7 +149,7 @@
     align-content: center;
 }
 
-.user-profile-box-info{
+#user-profile-box-info{
     display: flex;
     flex-direction: column;
     margin-top: 3%;
@@ -162,16 +162,16 @@
     border-radius:50px;
 }
 
-.user-profile-box-change{
+#user-profile-box-change{
     margin-left: 5%;
     margin-top: 0;
 }
 
-.user-profile-box-change label{
+#user-profile-box-change label{
     color: #413e3e;
 }
 
-.user-profile-box-change input{
+#user-profile-box-change input{
     border-color: #9d9d9d;
 }
 
@@ -179,7 +179,7 @@
     border-radius: 20px;
 }
 
-.user-profile-box-change button{
+#user-profile-box-change button{
     width: 140px;
     height: 40px;
     margin-top: 7%;
@@ -238,6 +238,8 @@
 }
 
 #breadcrumbs-container {
+    background-color: transparent;
+    border-width: 0;
     padding: 0;
 }
 
@@ -249,11 +251,6 @@
     font-size: 1.05rem;
     font-weight: bolder;
     margin: 0;
-}
-
-#chat-contents {
-    background-color: white;
-    height: 100%;
 }
 
 #chat-row {
@@ -290,4 +287,34 @@
     justify-content: center;
     align-items: center;
     padding: 0;
+}
+
+.chat-table {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+#chat-contents {
+    background-color: white;
+    height: 100%;
+    padding: 1em;
+}
+
+.chat-item-picture {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.chat-table-row {
+    height: 1em;
+}
+
+.chat-item-message {
+
+}
+
+.chat-item-time {
+
 }

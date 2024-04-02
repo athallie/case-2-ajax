@@ -1,8 +1,8 @@
-window.addEventListener('load', (e) => {
+/*window.addEventListener('load', (e) => {
   sessionStorage.clear();
-  /*
+  /!*
   * Prevent default
-  * */
+  * *!/
 
       let chatForm = document.querySelector('form#chat-form');
       chatForm.reset();
@@ -10,31 +10,15 @@ window.addEventListener('load', (e) => {
       chatForm.addEventListener('submit', (e) => {
           e.preventDefault();
       });
-})
+})*/
 
-const chatIcon = document.getElementById('chat-icon');
-const chatBox = document.getElementById('chat-box');
+let breadCrumbs = document.querySelector("button#breadcrumbs-container");
+breadCrumbs.addEventListener("click", (e) => {
 
-function tampilkanKotakChat() {
-  chatBox.style.display = 'block'; 
-}
-
-function sembunyikanKotakChat() {
-  chatBox.style.display = 'none'; 
-}
-
-chatIcon.addEventListener('click', function() {
-
-  if (chatBox.style.display === 'none') {
-    tampilkanKotakChat();
-
-    ambilDataChat();
-  } else {
-    sembunyikanKotakChat();
-  }
+    window.location.href = `settings.html`;
 });
 
-function ambilDataChat() {
+/*function ambilDataChat() {
 
   fetch('/api/data-chat')
     .then(response => response.json())
@@ -46,7 +30,7 @@ function ambilDataChat() {
     .catch(error => {
       console.error('Kesalahan saat mengambil data chat:', error);
     });
-}
+}*/
 
 //ADAM
 /*function readChat() {

@@ -20,13 +20,36 @@
         <div class="col col-9 d-flex align-items-center justify-content-start">
             <h5 id="chat-title" class="text-white">Chat Room</h5>
         </div>
-        <div id="breadcrumbs-container" class="col col-1 d-flex align-items-center justify-content-center">
+        <button type="button" data-bs-toggle="modal" data-bs-target="#user-profile-box" id="breadcrumbs-container" class="col col-1 d-flex align-items-center justify-content-center">
             <img src="assets/breadcrumbs.png" id="settings-breadcrumbs"/>
-        </div>
+        </button>
     </div>
 
     <div class="row" id="chat-contents">
-
+        <table>
+            <tr class="chat-table-row">
+                <td class="chat-table">
+                    <img src="assets/default-profile-picture.jpg" class="chat-item-picture">
+                </td>
+                <td class="chat-table">
+                    Pesan
+                </td>
+                <td class="chat-table">
+                    Waktu
+                </td>
+            </tr>
+            <tr>
+                <td class="chat-table">
+                    <img src="assets/default-profile-picture.jpg" class="chat-item-picture">
+                </td>
+                <td class="chat-table">
+                    Pesan
+                </td>
+                <td class="chat-table">
+                    Waktu
+                </td>
+            </tr>
+        </table>
     </div>
 
     <div class="row" id="chat-row">
@@ -43,5 +66,7 @@
 </body>
 
 <script src="dependencies/bootstrap/js/bootstrap.bundle.js"></script>
+<script src="scripts/js/chatbox.js"></script>
+<script src="scripts/js/settings.js"></script>
 
 </html>

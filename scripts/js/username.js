@@ -31,7 +31,7 @@ submitUsernameButton.addEventListener('click', (e) => {
 
     /*Send username to username.php for processing*/
     fetch(
-        "/Kode/scripts/php/username.php", {
+        "/scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
