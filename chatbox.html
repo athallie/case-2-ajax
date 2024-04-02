@@ -1,25 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="overflow: hidden">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatbox</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="dependencies/bootstrap/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 <body>
+
 <div class="container-fluid" id="chat-box">
-    <div id="chat-header">
-        <img src="assets/header-icon-black.jpg"
-             id="chat-logo">
-        <h2>Chat Room</h2>
-        <img src="">
+    <div class="row" id="chat-header">
+        <div class="col col-1 d-flex align-items-center justify-content-center">
+            <img src="assets/header-icon-white.jpg" id="chat-logo" />
+        </div>
+        <div class="col col-9 d-flex align-items-center justify-content-start">
+            <h5 id="chat-title" class="text-white">Chat Room</h5>
+        </div>
+        <div id="breadcrumbs-container" class="col col-1 d-flex align-items-center justify-content-center">
+            <img src="assets/breadcrumbs.png" id="settings-breadcrumbs"/>
+        </div>
     </div>
 
-    <div id="chat-contents"></div>
+    <div class="row" id="chat-contents">
 
-    <div id="chat-column">
+    </div>
 
+    <div class="row" id="chat-row">
+        <div class="col" id="chat-column">
+            <form>
+                <input type="text" placeholder="Type message..." name="message" id="chat-form" />
+            </form>
+            <button type="submit" class="btn" id="send-message-button">
+                <img src="assets/send-icon.png" id="send-message-button-icon"/>
+            </button>
+        </div>
     </div>
 </div>
 </body>
+
+<script src="dependencies/bootstrap/js/bootstrap.bundle.js"></script>
+
 </html>

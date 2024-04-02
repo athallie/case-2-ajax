@@ -1,5 +1,3 @@
-import {profileModal} from "./settings";
-
 /*Clear session storage on reload*/
 window.addEventListener('load', (e) => {
     sessionStorage.clear();
@@ -43,6 +41,7 @@ submitUsernameButton.addEventListener('click', (e) => {
     ).then((response => {
         response.text().then((username) => {
             console.warn('Username: ' + username);
+            window.location.href = "chatbox.html";
         })
     }))
 });
