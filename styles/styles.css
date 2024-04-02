@@ -121,90 +121,121 @@ body {
 /*settings.html*/
 #user-profile-box{
     width: 100%;
-    height: 100%;
     background-color: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
 }
 
 #user-profile-box-header{
-    width: 100%;
-    height: 4em;
     display: flex;
     flex-direction: row;
     justify-content: left;
-    padding: 5%;
-    color: #fff;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding-block: 1em;
+    padding-left: 1.5em;
     background-color: #3DADFF;
+    color: #fff;
     border-radius: 10px 10px 0 0;
 }
 
 #chat-box-logo-white{
-    width: auto;
-    height: 40px;
-    margin-right: 5%;
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 1.2em;
 }
 
 #text-header{
     align-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
 }
 
-#user-profile-box-info{
+#user-profile-box-info {
     display: flex;
     flex-direction: column;
-    margin-top: 3%;
+    margin-top: 1.75em;
     align-items: center;
+    margin-bottom: .75em;
 }
 
-#photo-profile{
-    width: 80px;
-    height: 80px;
-    border-radius:50px;
+#photo-profile {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    margin-bottom: 1em;
 }
 
-#user-profile-box-change{
-    margin-left: 5%;
-    margin-top: 0;
+#username {
+    font-size: 1rem;
+}
+
+#user-profile-contents {
+    padding-inline: 1.5em;
 }
 
 #user-profile-box-change label{
     color: #413e3e;
+    margin-bottom: .75em;
 }
 
 #user-profile-box-change input{
     border-color: #9d9d9d;
 }
 
-#new-username{
-    border-radius: 20px;
+label {
+    font-size: .8rem;
 }
 
-#user-profile-box-change button{
-    width: 140px;
-    height: 40px;
-    margin-top: 7%;
-    margin-left: 30%;
-    margin-bottom: 15px;
-    background-color: #3DADFF;
-    border: 0 ;
-    border-radius: 10px;
-    color: #fff;
+#new-photo {
+    width: 75%;
+    margin-bottom: 1em;
+}
+
+#new-username {
+    width: 75%;
+    border-radius: 2em;
+    padding-block: .5em;
+    padding-inline: 1em;
+    font-size: .75rem;
+    margin-bottom: .75em;
+}
+
+#buttons {
     display: flex;
-    align-items: center;
-    cursor: pointer;
     justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+    padding-top: 1.25em;
+    padding-bottom: 1.1em;
 }
 
-#save-button :hover{
-    color: #064069;
+#buttons button {
+    width: 45%;
+    color: #fff;
+    cursor: pointer;
+    font-size: .75rem;
 }
 
-#back-button :hover{
-    color: #413e3e;
+#save-button {
+    background-color: #3DADFF;
 }
 
 #back-button{
     background-color: #9d9d9d;
+}
+
+#save-button:hover{
+    background-color: #3b97e1;
+}
+
+#back-button:hover{
+    background-color: darkgrey;
 }
 
 /*chatbox.html*/
@@ -248,7 +279,7 @@ body {
 }
 
 #chat-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: bolder;
     margin: 0;
 }

@@ -1,4 +1,7 @@
 let profilePic = document.querySelector("img#photo-profile");
+let backButton = document.querySelector("button#back-button");
+let submitProfilePictureButton = document.querySelector('button#save-button');
+let username = document.querySelector("h5#username");
 
 /*Clear session storage on reload*/
 window.addEventListener('load', (e) => {
@@ -13,12 +16,12 @@ window.addEventListener('load', (e) => {
     });
 
     changeImg(profilePic, localStorage.getItem("profile-picture"));
+    username.innerHTML = sessionStorage.getItem("username");
 })
 
 /*
 * Submit Profile Picture
 * */
-let submitProfilePictureButton = document.querySelector('button#save-button');
 submitProfilePictureButton.addEventListener('click', (e) => {
     let pictureInput = document.querySelector('input[type="file"]');
     let formData = new FormData();
@@ -43,6 +46,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
             console.warn('Username: ' + newUsername);
             sessionStorage.setItem("username", newUsername);
             formData.append(newUsername, pictureInput.files[0]);
+
             /*Send profile picture to username.php for processing*/
             fetch(
                 "/scripts/php/profilepic.php", {
@@ -61,7 +65,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
     }))
 });
 
-let backButton = document.querySelector("button#back-button");
+
 backButton.addEventListener("click", (e) => {
     window.history.back();
 })
