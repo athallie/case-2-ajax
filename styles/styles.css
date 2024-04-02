@@ -1,0 +1,210 @@
+/*username.html*/
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#main-container {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9BDBFF;
+}
+
+#main-iframe {
+    opacity: 0;
+    width: 25%;
+    height: 75%;
+    border: lightgray solid 1px;
+    border-radius: 1em;
+    box-shadow: 0 2px 8px lightslategray;
+    transition: 1s;
+}
+
+/*username.html*/
+.chat-box {
+    width: 100%;
+    height: 100vh;
+    padding: 1.5em;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#chat-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    color: #413e3e;
+}
+
+#chat-box-logo {
+    width: 70px;
+    height: 56px;
+    margin-right: 5%;
+}
+
+#chat-box-form {
+    text-align: center;
+    padding: 15%;
+    color: #413e3e;
+}
+
+#username-input {
+    width: 100%;
+    padding: 1em;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    border-color: #9d9d9d;
+}
+
+#start-chat-button {
+    width: 70%;
+    margin-bottom: 15px;
+    background-color: #3DADFF;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#start-chat-button:hover {
+    transform: scale(1.03);
+    transition: transform .3s;
+    color: white;
+    background-color: rgba(51,152,216,0.68);
+}
+
+#start-chat-button:not(:hover) {
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+#start-chat-button:active{
+    transform: scale(1);
+    background-color: rgba(51,152,216,0.75);
+}
+
+
+#chat-box-footer {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#fab-username {
+    position: fixed;
+    padding: 0;
+    background-image: url("../assets/icon.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
+    transition: ease-in-out 0.5s, transform 0.25s;
+}
+
+#fab-username:hover {
+    background-blend-mode: darken;
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+/*settings.html*/
+#user-profile-box{
+    width: 50%;
+    height: 100vh;
+    padding: 1.5em;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.user-profile-box-header{
+    width: auto;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding: 5%;
+    color: #fff;
+    background-color: #3DADFF;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#chat-box-logo-white{
+    width: auto;
+    height: 40px;
+    margin-right: 5%;
+}
+
+#text-header{
+    align-content: center;
+}
+
+.user-profile-box-info{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3%;
+    align-items: center;
+}
+
+#photo-profile{
+    width: 80px;
+    height: 80px;
+    border-radius:50px;
+}
+
+.user-profile-box-change{
+    margin-left: 5%;
+    margin-top: 0;
+}
+
+.user-profile-box-change label{
+    color: #413e3e;
+}
+
+.user-profile-box-change input{
+    border-color: #9d9d9d;
+}
+
+#new-username{
+    border-radius: 20px;
+}
+
+.user-profile-box-change button{
+    width: 140px;
+    height: 40px;
+    margin-top: 7%;
+    margin-left: 30%;
+    margin-bottom: 15px;
+    background-color: #3DADFF;
+    border: 0cm ;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+
+#save-button :hover{
+    color: #064069;
+}
+
+#back-button :hover{
+    color: #413e3e;
+}
+
+#back-button{
+    background-color: #9d9d9d;
+}
+
+/*chatbox.html*/

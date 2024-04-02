@@ -69,4 +69,4 @@ backButton.addEventListener("click", (e) => {
 function changeImg(img, src) {
     img.src = src;
     localStorage.setItem("profile-picture", src);
-}
+};
