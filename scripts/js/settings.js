@@ -68,6 +68,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
 
 backButton.addEventListener("click", (e) => {
     window.history.back();
+    //@Kelompok 1 PemWeb E Semester Genap 2023/2024
 })
 
 function changeImg(img, src) {

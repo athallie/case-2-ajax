@@ -23,6 +23,7 @@ submitUsernameButton.addEventListener('click', (e) => {
     let usernameInput = document.querySelector('input[name="username"]').value;
     if (usernameInput.trim() === "") {
         usernameInput = "user" + Math.floor(Math.random() * 9000) + 1000;
+    //@Kelompok 1 PemWeb E Semester Genap 2023/2024
     }
 
     /*Store username in session storage*/
