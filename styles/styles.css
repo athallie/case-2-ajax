@@ -1,0 +1,367 @@
+/*username.html*/
+
+* {
+    font-family: 'Manrope', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: white;
+}
+
+#main-container {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: #9BDBFF;
+}
+
+#main-iframe {
+    position: fixed;
+    right: 4em;
+    opacity: 0;
+    width: 20em;
+    height: 75vh;
+    border: lightgray solid 1px;
+    border-radius: 1em;
+    box-shadow: 0 2px 8px lightslategray;
+    transition: 1s;
+}
+
+/*username.html*/
+#username-container {
+    width: 100%;
+    height: 100vh;
+    padding: 1.5em;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#username-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+    color: #413e3e;
+}
+
+#username-logo {
+    width: 70px;
+    height: 56px;
+    margin-right: 5%;
+}
+
+#username-body {
+    text-align: center;
+    padding: 15%;
+    color: #413e3e;
+}
+
+#username-input {
+    width: 100%;
+    padding: 1em;
+    height: 35px;
+    margin-top: 10px;
+    margin-bottom: 20%;
+    border-radius: 20px;
+    border-color: #9d9d9d;
+}
+
+#start-chat-button {
+    width: 70%;
+    margin-bottom: 15px;
+    background-color: #3DADFF;
+    border: 0;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/*@Kelompok 1 PemWeb E Semester Genap 2023/2024*/
+
+#start-chat-button:hover {
+    transform: scale(1.03);
+    transition: transform .3s;
+    color: white;
+    background-color: rgba(51,152,216,0.68);
+}
+
+#start-chat-button:not(:hover) {
+    transform: scale(1);
+    transition: transform .5s;
+}
+
+#start-chat-button:active{
+    transform: scale(1);
+    background-color: rgba(51,152,216,0.75);
+}
+
+
+#username-footer {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#username-footer h5 {
+    font-size: 1rem;
+}
+
+#fab-username {
+    position: fixed;
+    right: 4em;
+    bottom: 3em;
+    padding: 0;
+    background-image: url("../assets/logo-icon.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 3em;
+    height: 3em;
+    transition: ease-in-out 0.5s, transform 0.25s;
+}
+
+#fab-username:hover {
+    background-blend-mode: darken;
+    background-color: lightgray;
+    transform: scale(1.05);
+}
+
+#fab-username:active {
+    transform: scale(0.95);
+    background-color: lightgoldenrodyellow;
+}
+
+
+/*settings.html*/
+#user-profile-box{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+#user-profile-box-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    padding-block: 1em;
+    padding-left: 1.5em;
+    background-color: #3DADFF;
+    color: #fff;
+    border-radius: 10px 10px 0 0;
+}
+
+#chat-box-logo-white{
+    width: 1.25em;
+    height: 1.25em;
+    margin-right: 1.2em;
+}
+
+#text-header{
+    align-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+#user-profile-box-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.75em;
+    align-items: center;
+    margin-bottom: .75em;
+}
+
+#photo-profile {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    margin-bottom: 1em;
+}
+
+#username {
+    font-size: 1rem;
+}
+
+#user-profile-contents {
+    padding-inline: 1.5em;
+}
+
+#user-profile-box-change label{
+    color: #413e3e;
+    margin-bottom: .75em;
+}
+
+#user-profile-box-change input{
+    border-color: #9d9d9d;
+}
+
+label {
+    font-size: .8rem;
+}
+
+#new-photo {
+    width: 75%;
+    margin-bottom: 1em;
+}
+
+#new-username {
+    width: 75%;
+    border-radius: 2em;
+    padding-block: .5em;
+    padding-inline: 1em;
+    font-size: .75rem;
+    margin-bottom: .75em;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1em;
+    padding-top: 1.25em;
+    padding-bottom: 1.1em;
+}
+
+#buttons button {
+    width: 45%;
+    color: #fff;
+    cursor: pointer;
+    font-size: .75rem;
+}
+
+#save-button {
+    background-color: #3DADFF;
+}
+
+#back-button{
+    background-color: #9d9d9d;
+}
+
+#save-button:hover{
+    background-color: #3b97e1;
+}
+
+#back-button:hover{
+    background-color: darkgrey;
+}
+
+/*chatbox.html*/
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.row {
+    width: 100%;
+    margin: 0;
+}
+
+#chat-header {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    background-color: #3DADFF;
+    padding-block: 1em;
+    padding-left: 1.5em;
+}
+
+#chat-logo {
+    width: 1.25em;
+    height: 1.25em;
+}
+
+#breadcrumbs-container {
+    background-color: transparent;
+    border-width: 0;
+    padding: 0;
+}
+
+#settings-breadcrumbs {
+    height: 1em;
+}
+
+#chat-title {
+    font-size: 1rem;
+    font-weight: bolder;
+    margin: 0;
+}
+
+#chat-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1em;
+}
+
+#chat-form {
+    margin-left: 1em;
+    width: 20em;
+    border-width: .08em;
+    border-color: black;
+    border-radius: 1em;
+    padding-block: .2em;
+    padding-inline: .5em;
+    font-size: .75rem;
+}
+
+#send-message-button {
+    margin-left: .5em;
+    padding: .5em;
+}
+
+#send-message-button-icon {
+    width: 1.5em;
+    height: 1.5em;
+}
+
+#chat-column {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+.chat-table {
+    border-width: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+#chat-contents {
+    background-color: white;
+    height: 100%;
+    padding: 1em;
+}
+
+.chat-item-picture {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}
+
+.chat-table-row {
+    height: 1em;
+}
+
+.chat-item-message {
+
+}
+
+.chat-item-time {
+
+}

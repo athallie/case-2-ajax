@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" style="overflow: scroll">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="dependencies/bootstrap/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css"/>
+</head>
+<body>
+<div id="user-profile-box">
+    <div id="user-profile-box-header">
+        <img src="assets/header-icon-white.jpg"
+             id="chat-box-logo-white">
+        <h2 id="text-header">User Profile</h2>
+    </div>
+
+    <div id="user-profile-contents">
+        <div id="user-profile-box-info">
+            <img src="assets/default-profile-picture.jpg"
+                 id="photo-profile">
+            <h5 id="username">Username</h5>
+        </div>
+        <!--@Kelompok 1 PemWeb E Semester Genap 2023/2024-->
+        <div id="user-profile-box-change">
+            <form id="edit-profile-form">
+                <label for="new-photo">Change Photo</label>
+                <input type="file" class="form-control form-control-sm" id="new-photo" name="new-photo">
+                <label for="new-username">Change Username</label>
+                <input type="text" id="new-username" name="new-username"
+                       placeholder="Enter new username">
+            </form>
+        </div>
+        <div id="buttons">
+            <button class="btn" type="button" id="back-button">Back</button>
+            <button class="btn" type="submit" id="save-button">Save</button>
+        </div>
+    </div>
+</div>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="dependencies/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="scripts/js/settings.js"></script>
+</html>

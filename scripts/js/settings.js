@@ -1,5 +1,7 @@
-localStorage.getItem("profile-picture");
 let profilePic = document.querySelector("img#photo-profile");
+let backButton = document.querySelector("button#back-button");
+let submitProfilePictureButton = document.querySelector('button#save-button');
+let username = document.querySelector("h5#username");
 
 /*Clear session storage on reload*/
 window.addEventListener('load', (e) => {
@@ -14,12 +16,12 @@ window.addEventListener('load', (e) => {
     });
 
     changeImg(profilePic, localStorage.getItem("profile-picture"));
+    username.innerHTML = sessionStorage.getItem("username");
 })
 
 /*
 * Submit Profile Picture
 * */
-let submitProfilePictureButton = document.querySelector('button#save-button');
 submitProfilePictureButton.addEventListener('click', (e) => {
     let pictureInput = document.querySelector('input[type="file"]');
     let formData = new FormData();
@@ -32,7 +34,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
 
     /*Send username change*/
     fetch(
-        "/Kode/scripts/php/username.php", {
+        "/scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
@@ -44,16 +46,18 @@ submitProfilePictureButton.addEventListener('click', (e) => {
             console.warn('Username: ' + newUsername);
             sessionStorage.setItem("username", newUsername);
             formData.append(newUsername, pictureInput.files[0]);
+
             /*Send profile picture to username.php for processing*/
             fetch(
-                "/Kode/scripts/php/profilepic.php", {
+                "/scripts/php/profilepic.php", {
                     method: "post",
                     body: formData
                 }
             ).then((response => {
                 response.text().then((picture) => {
                     console.warn('Picture: ' + picture);
-                    let src = `/Kode/data/profile-pics/${picture}`;
+                    let src = `/data/profile-pics/${picture}`;
+                    localStorage.setItem("profile-picture", src);
                     location.reload();
                 })
             }))
@@ -61,9 +65,10 @@ submitProfilePictureButton.addEventListener('click', (e) => {
     }))
 });
 
-let backButton = document.querySelector("button#back-button");
+
 backButton.addEventListener("click", (e) => {
     window.history.back();
+    //@Kelompok 1 PemWeb E Semester Genap 2023/2024
 })
 
 function changeImg(img, src) {
