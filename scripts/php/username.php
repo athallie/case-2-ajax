@@ -17,5 +17,5 @@ if (in_array($username, $existingUsernames)) {
     echo 'Username already exists';
 } else {
     file_put_contents($users, $username . "\n", FILE_APPEND);
-    echo 'Username created succesfully';
+    echo 'Username created successfully';
 }

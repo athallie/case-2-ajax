@@ -4,11 +4,12 @@ let chatBox = document.querySelector("iframe#main-iframe");
 fabUsername.addEventListener("click", (e) => {
     if (chatBox.style.opacity === "1") {
         chatBox.style.opacity = "0";
-        fabUsername.style.translate = "0em";
-        chatBox.style.translate = "-5em"
+        chatBox.style.translate = "0 0em"
+        fabUsername.style.borderWidth = "0px"
+        fabUsername.style.boxShadow = "0 0 0 0"
     } else {
         chatBox.style.opacity = "1";
-        fabUsername.style.translate = "-12em";
-        chatBox.style.translate = "1em";
+        chatBox.style.translate = "0 -3em";
+        fabUsername.style.boxShadow = "0px 0px 5px blue"
     }
 });

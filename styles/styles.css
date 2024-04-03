@@ -14,12 +14,14 @@ body {
     margin: 0;
     height: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     background-color: #9BDBFF;
 }
 
 #main-iframe {
+    position: fixed;
+    right: 4em;
     opacity: 0;
     width: 20em;
     height: 75vh;
@@ -107,6 +109,8 @@ body {
 
 #fab-username {
     position: fixed;
+    right: 4em;
+    bottom: 3em;
     padding: 0;
     background-image: url("../assets/logo-icon.jpg");
     background-size: contain;
@@ -121,6 +125,12 @@ body {
     background-color: lightgray;
     transform: scale(1.05);
 }
+
+#fab-username:active {
+    transform: scale(0.95);
+    background-color: lightgoldenrodyellow;
+}
+
 
 /*settings.html*/
 #user-profile-box{
