@@ -1,16 +1,13 @@
-/*window.addEventListener('load', (e) => {
-  sessionStorage.clear();
-  /!*
-  * Prevent default
-  * *!/
-
+window.addEventListener('load', (e) => {
+  
       let chatForm = document.querySelector('form#chat-form');
       chatForm.reset();
       document.querySelector("button#send-chat").disabled = true;
       chatForm.addEventListener('submit', (e) => {
           e.preventDefault();
       });
-})*/
+
+})
 
 let breadCrumbs = document.querySelector("button#breadcrumbs-container");
 breadCrumbs.addEventListener("click", (e) => {
@@ -18,37 +15,31 @@ breadCrumbs.addEventListener("click", (e) => {
     window.location.href = `settings.html`;
 });
 
-/*function ambilDataChat() {
-
-  fetch('/api/data-chat')
-    .then(response => response.json())
-    .then(data => {
-
-      console.log('Data chat:', data);
-
-    })
-    .catch(error => {
-      console.error('Kesalahan saat mengambil data chat:', error);
-    });
-}*/
 
 //ADAM
-/*function readChat() {
-    fetch(`/scripts/php/sent.php`)
-        .then((res) => res.text())
-        .then((res) => {
-            let chatbox = document.querySelector('#chatbox');
-            chatbox.innerHTML = res;
-        });
-    setTimeout(readChat, 1000);
+function loadChat() {
+    $.ajax({
+        url: 'scripts/php/sent.php',
+        type: 'GET',
+        success: function(response) {
+            $('#chat-contents').html(response);
+        }
+    });
 }
-readChat();*/
+
+setInterval(function() {
+    loadChat();
+}, 300);
+
+function scrollBottom() {
+    chatboxMessageWrapper.scrollTo(0, chatboxMessageWrapper.scrollHeight)
+}
 
 // @Kelompok 1 PemWeb E Semester Genap 2023/2024
 
 //Send Message
 
-/*let sendButton = document.querySelector('button#send-chat');
+let sendButton = document.querySelector('button#send-message-button');
 sendButton.addEventListener('click', (e) => {
     let formData = {
         "username": sessionStorage.getItem('username'),
@@ -58,7 +49,7 @@ sendButton.addEventListener('click', (e) => {
     console.log(JSON.stringify(formData));
 
     fetch(
-        "/scripts/php/chat.php", {
+        "scripts/php/chat.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/json',
@@ -68,4 +59,4 @@ sendButton.addEventListener('click', (e) => {
         console.log(data);
         document.querySelector('input[name="message"]').value = "";
     })
-});*/
+})
