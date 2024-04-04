@@ -7,7 +7,7 @@ $username = $data["username"];
 $message = $data["message"];
 $date = $data["date"];
 //@Kelompok 1 PemWeb E Semester Genap 2023/2024
-$log = "[$date] $username: $message";
+$log = "[$username] [$date] $message";
 $jsonString = json_encode($log);
 
 $path = "../../data/chat.txt";

@@ -12,50 +12,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+
+    </style>
 </head>
 <body>
 
 <div class="container-fluid" id="chat-box">
     <div class="row" id="chat-header">
-        <div class="col col-1 d-flex align-items-center justify-content-center">
-            <img src="assets/header-icon-white.jpg" id="chat-logo" />
-        </div>
-        <div class="col col-9 d-flex align-items-center justify-content-start">
-            <h5 id="chat-title" class="text-white">Chat Room</h5>
-        </div>
+        <div class="chatbox-message-profile">
+			<img id="profil-foto" src="assets/default-profile-picture.jpg" class="chat-item-picture">
+			<div>
+				<h4 class="chatbox-message-name" id="profil-name"></h4>
+				<p class="chatbox-message-status">online</p>
+			</div>
+		</div>
         <!--@Kelompok 1 PemWeb E Semester Genap 2023/2024-->
         <button type="button" data-bs-toggle="modal" data-bs-target="#user-profile-box" id="breadcrumbs-container" class="col col-1 d-flex align-items-center justify-content-center">
             <img src="assets/breadcrumbs.png" id="settings-breadcrumbs"/>
         </button>
     </div>
-
-    <div class="row" id="chat-contents">
-        <table>
-            <tr class="chat-table-row">
-                <td class="chat-table">
-                    <img src="assets/default-profile-picture.jpg" class="chat-item-picture">
-                </td>
-                <td class="chat-table">
-                    Pesan
-                </td>
-                <td class="chat-table">
-                    Waktu
-                </td>
-            </tr>
-            <tr>
-                <td class="chat-table">
-                    <img src="assets/default-profile-picture.jpg" class="chat-item-picture">
-                </td>
-                <td class="chat-table">
-                    Pesan
-                </td>
-                <td class="chat-table">
-                    Waktu
-                </td>
-            </tr>
-        </table>
-    </div>
-
+    
+        <div class=""  id="chat-contents">
+             
+        </div>
+   
+    
     <div class="row" id="chat-row">
         <div class="col" id="chat-column">
             <form>

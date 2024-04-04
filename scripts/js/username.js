@@ -32,7 +32,7 @@ submitUsernameButton.addEventListener('click', (e) => {
 
     /*Send username to username.php for processing*/
     fetch(
-        "/scripts/php/username.php", {
+        "scripts/php/username.php", {
             method: "post",
             headers: {
                 'Content-Type':'application/x-www-form-urlencoded',
@@ -46,3 +46,4 @@ submitUsernameButton.addEventListener('click', (e) => {
         })
     }))
 });
+
