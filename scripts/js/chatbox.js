@@ -1,3 +1,6 @@
+let chatTitle = document.querySelector("h5#chat-title");
+chatTitle.innerHTML = sessionStorage.getItem("username");
+
 window.addEventListener('load', (e) => {
   
       let chatForm = document.querySelector('form#chat-form');
