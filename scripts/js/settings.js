@@ -15,7 +15,7 @@ window.addEventListener('load', (e) => {
         e.preventDefault();
     });
 
-    changeImg(profilePic, localStorage.getItem("profile-picture"));
+    changeImg(profilePic, localStorage.getItem("profile-pics"));
     username.innerHTML = sessionStorage.getItem("username");
 })
 
@@ -57,7 +57,7 @@ submitProfilePictureButton.addEventListener('click', (e) => {
                 response.text().then((picture) => {
                     console.warn('Picture: ' + picture);
                     let src = `/data/profile-pics/${picture}`;
-                    localStorage.setItem("profile-picture", src);
+                    localStorage.setItem("profile-pics", src);
                     location.reload();
                 })
             }))
@@ -73,5 +73,5 @@ backButton.addEventListener("click", (e) => {
 
 function changeImg(img, src) {
     img.src = src;
-    localStorage.setItem("profile-picture", src);
+    localStorage.setItem("profile-pics", src);
 }
