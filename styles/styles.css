@@ -262,7 +262,7 @@ label {
     height: 100vh;
     padding: 0;
     justify-content: center;
-    align-items: baseline;
+    align-items: start;
 }
 
 .row {
@@ -337,16 +337,11 @@ label {
     padding: 0;
 }
 
-.chat-table {
-    border-width: 1px;
-    border-color: black;
-    border-style: solid;
-}
-
 #chat-contents {
     background-color: white;
     height: 100%;
     padding: 1em;
+    width: 100%;
     overflow-y: auto;
 }
 
@@ -357,40 +352,16 @@ label {
     border-radius: 50%;
 }
 
-.chat-table-row {
-    height: 1em;
-}
-
-
-
-.chatbox-message-header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	background: var(--white);
-	padding: .75rem 1.5rem;
-}
 .chatbox-message-profile {
 	display: inline-block;
 	align-items: center;
 	grid-gap: .5rem;
 }
-.chatbox-message-image {
-	width: 3rem;
-	height: 3rem;
-	object-fit: cover;
-	border-radius: 50%;
-}
+
 .chatbox-message-name {
 	font-size: 1.125rem;
 	font-weight: 600;
 }
-.chatbox-message-status {
-	font-size: .875rem;
-	color: grey;
-}
-
-
 
 .chatbox-message-item {
 	width: 90%;
@@ -399,12 +370,15 @@ label {
 
 .box-message {
 	align-self: flex-end;
-	
+    margin-bottom: 1em;
+	width: 100%;
 }
 
 .chatbox-message-item-text {
+    word-break: break-all;
+    color: white;
 	margin-top: .5rem;
-	display: flex-end;
+	display: flex;
     padding: 10px;
     background: #3DADFF;
 	border-radius: .75rem 0 .75rem .75rem;

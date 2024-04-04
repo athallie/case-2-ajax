@@ -1,8 +1,3 @@
-
-let profil = document.querySelector("h4#profil-name");
-profil.innerHTML = sessionStorage.getItem("username");
-let profilepicture = document.querySelector("img#profil-foto");
-
 window.addEventListener('load', (e) => {
   
       let chatForm = document.querySelector('form#chat-form');
@@ -11,6 +6,7 @@ window.addEventListener('load', (e) => {
       chatForm.addEventListener('submit', (e) => {
           e.preventDefault();
       });
+
 })
 
 let breadCrumbs = document.querySelector("button#breadcrumbs-container");
