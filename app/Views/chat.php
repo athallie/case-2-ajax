@@ -32,11 +32,7 @@
         </div>
     </div>
     <div class="row position-absolute container-fluid px-3 overflow-scroll" id="chat-body">
-        <div class="row m-0 container-fluid bg-primary" id="chat-table">
-            <div class="col">
-            </div>
-            <div class="col">
-            </div>
+        <div class="row m-0 container-fluid" id="chat-table">
         </div>
     </div>
     <div class="row bg-dark container-fluid position-absolute bottom-0 py-2 shadow rounded-3" id="chat-footer">

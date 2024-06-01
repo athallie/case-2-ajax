@@ -16,7 +16,6 @@
     width: 25%;
 }
 
-/*username.html*/
 #iframe-main-container {
     transition: transform 0.3s;
 }
@@ -84,7 +83,7 @@
 
 #chat-body {
     top: 0;
-    bottom: 0;
+    max-height: 100%;
     z-index: 0;
     padding-top: 7.5%;
     padding-bottom: 5.5%;
@@ -92,9 +91,12 @@
 
 @media screen {
     @media (max-width: 1000px) {
-        #chat-body {
+        #chat-table-container {
             padding-top: 8.5%;
             padding-bottom: 6.5%;
+        }
+        #main-iframe {
+            width: 35%;
         }
     }
     @media (max-width: 890px) {
@@ -120,11 +122,17 @@
             padding-top: 15.5%;
             padding-bottom: 11.6%;
         }
+        #main-iframe {
+            width: 50%;
+        }
     }
     @media (max-width: 495px) {
         #chat-body {
             padding-top: 17.5%;
             padding-bottom: 13.6%;
+        }
+        #main-iframe {
+            width: 60%;
         }
     }
 

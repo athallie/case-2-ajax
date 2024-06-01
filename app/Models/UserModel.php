@@ -50,8 +50,17 @@ class UserModel extends Model
             $query = $this->db->prepare(
                 "UPDATE case_5.user SET username = '$newUsername' WHERE username = '$username';"
             );
-            return $query->execute();
+            $result = $query->execute();
+            $this->deleteUser($username);
+            return $result;
         }
         return false;
+    }
+
+    function deleteUser($username) {
+        $query = $this->db->prepare(
+            "DELETE FROM case_5.user WHERE username = '$username';"
+        );
+        return $query->execute();
     }
 }
