@@ -35,12 +35,12 @@ submitUsernameButton.addEventListener('click', (e) => {
 
     login(sender, receiver);
     mainIframe.style.width = "95%";
-    fab.style.translate = "0 -3em";
+    fab.style.translate = "2.25em -28.25em";
 });
 
 function login(sender, receiver) {
     fetch(
-        `/index.php?c=Home&m=login`, {
+        `/index.php?c=User&m=login`, {
             method: "post",
             headers: {
                 'Content-Type':'application/json'

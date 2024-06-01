@@ -1,19 +1,30 @@
-let chatTitle = document.querySelector("div#chat-title");
+let usernameField = document.querySelector("input[name='username']");
 let chatBody = document.querySelector("div#chat-body");
 let sendButton = document.querySelector('button#send-message-button');
 let textArea = document.querySelector("textarea#message-text-area");
 
-chatTitle.innerHTML = sessionStorage.getItem("receiver");
+usernameField.value = sessionStorage.getItem("sender");
+document.querySelector("h5#receiver-display").textContent = sessionStorage.getItem("receiver");
 
-let breadCrumbs = document.querySelector("button#breadcrumbs-container");
-breadCrumbs.addEventListener("click", (e) => {
-    window.location.href = `settings.html`;
-});
+let editButton = document.querySelector("button#edit-username-button");
 
 setInterval(() => {
     console.log("chatview")
     getChatView(sessionStorage.getItem("sender"), sessionStorage.getItem("receiver"))
 }, 1000);
+
+sendButton.addEventListener('click', (e) => {
+    sendMessage();
+})
+
+usernameField.addEventListener("focusout", (e) => {
+    usernameField.value = sessionStorage.getItem("sender")
+})
+
+/*Ubah Username*/
+editButton.addEventListener("click", (e) => {
+    editUsername();
+});
 
 function getChatView(sender, receiver) {
     fetch(
@@ -72,11 +83,38 @@ function refreshTable(table, data) {
     )
 }
 
-// @Kelompok 1 PemWeb E Semester Genap 2023/2024
+function editUsername() {
+    let oldUsername = usernameField.value;
+    usernameField.readOnly = false;
+    usernameField.focus({focusVisible: true});
+    usernameField.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+            e.preventDefault();
+            usernameField.readOnly = true;
+            fetch(
+                "/index.php?c=User&m=updateUsername", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({username: oldUsername, newUsername: usernameField.value})
+                }
+            )
+                .then(response => response.text())
+                .then(username => {
+                    console.log(username)
+                    if (username === "false") {
+                        alert("Error: username telah terpakai. Coba gunakan username lain.")
+                        usernameField.value = oldUsername;
+                    } else {
+                        sessionStorage.setItem("sender", usernameField.value)
+                    }
+                })
+        }
+    })
+}
 
-//Send Message
-
-sendButton.addEventListener('click', (e) => {
+function sendMessage() {
     let date = new Date();
     date = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate(), date.getHours(), date.getMinutes(), date.getSeconds()));
     date = date.toISOString().split('.')[0];
@@ -102,4 +140,4 @@ sendButton.addEventListener('click', (e) => {
             textArea.value = "";
         }
     )
-})
+}

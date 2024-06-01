@@ -2,7 +2,7 @@
 
 require_once (realpath(dirname(__FILE__) . "/../Models/UserModel.php"));
 
-class Home extends Controller
+class User extends Controller
 {
 
     private $userModel;
@@ -19,6 +19,11 @@ class Home extends Controller
 
     function login()
     {
-        echo json_encode($this->userModel->getUser($this->data["sender"], $this->data["receiver"]));
+        echo json_encode($this->userModel->addUsersIfNotExist($this->data["sender"], $this->data["receiver"]));
+    }
+
+    function updateUsername()
+    {
+        echo json_encode($this->userModel->updateUser($this->data["username"], $this->data["newUsername"]));
     }
 }

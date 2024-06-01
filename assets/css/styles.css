@@ -1,13 +1,7 @@
-/*username.html*/
-
 * {
     font-family: 'Manrope', sans-serif;
     padding: 0;
     margin: 0;
-}
-
-#chat-header {
-    background-color: #3DADFF;
 }
 
 #main-container {
@@ -39,8 +33,6 @@
     border-radius: 10px;
     color: #fff;
 }
-
-/*@Kelompok 1 PemWeb E Semester Genap 2023/2024*/
 
 #start-chat-button:hover {
     transform: scale(1.03);
@@ -81,128 +73,78 @@
     background-color: lightgoldenrodyellow;
 }
 
-
-/*settings.html*/
-#user-profile-box{
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-#user-profile-box-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    margin: 0;
-    padding-block: 1em;
-    padding-left: 1.5em;
+#chat-header {
     background-color: #3DADFF;
-    color: #fff;
-    border-radius: 10px 10px 0 0;
+    z-index: 1;
 }
 
-#chat-box-logo-white{
-    width: 1.25em;
-    height: 1.25em;
-    margin-right: 1.2em;
+#chat-footer {
+    z-index: 1;
 }
 
-#text-header{
-    align-content: center;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 0;
+#chat-body {
+    top: 0;
+    bottom: 0;
+    z-index: 0;
+    padding-top: 7.5%;
+    padding-bottom: 5.5%;
 }
 
-#user-profile-box-info {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.75em;
-    align-items: center;
-    margin-bottom: .75em;
-}
+@media screen {
+    @media (max-width: 1000px) {
+        #chat-body {
+            padding-top: 8.5%;
+            padding-bottom: 6.5%;
+        }
+    }
+    @media (max-width: 890px) {
+        #chat-body {
+            padding-top: 9.5%;
+            padding-bottom: 7.5%;
+        }
+    }
+    @media (max-width: 785px) {
+        #chat-body {
+            padding-top: 10.5%;
+            padding-bottom: 9.5%;
+        }
+    }
+    @media (max-width: 715px) {
+        #chat-body {
+            padding-top: 11.5%;
+            padding-bottom: 10.5%;
+        }
+    }
+    @media (max-width: 715px) {
+        #chat-body {
+            padding-top: 15.5%;
+            padding-bottom: 11.6%;
+        }
+    }
+    @media (max-width: 495px) {
+        #chat-body {
+            padding-top: 17.5%;
+            padding-bottom: 13.6%;
+        }
+    }
 
-#photo-profile {
-    width: 4em;
-    height: 4em;
-    border-radius: 50%;
-    border-width: 1px;
-    border-style: solid;
-    border-color: grey;
-    margin-bottom: 1em;
-}
-
-#username {
-    font-size: 1rem;
-}
-
-#user-profile-contents {
-    padding-inline: 1.5em;
-}
-
-#user-profile-box-change label{
-    color: #413e3e;
-    margin-bottom: .75em;
-}
-
-#user-profile-box-change input{
-    border-color: #9d9d9d;
 }
 
 label {
     font-size: .8rem;
 }
 
-#new-photo {
-    width: 75%;
-    margin-bottom: 1em;
-}
-
-#new-username {
-    width: 75%;
-    border-radius: 2em;
-    padding-block: .5em;
-    padding-inline: 1em;
-    font-size: .75rem;
-    margin-bottom: .75em;
-}
-
-#save-button {
-    background-color: #3DADFF;
-}
-
-#back-button{
-    background-color: #9d9d9d;
-}
-
-#save-button:hover{
-    background-color: #3b97e1;
-}
-
-#back-button:hover{
-    background-color: darkgrey;
-}
-
-
-#breadcrumbs-container {
-    background-image: url("../images/breadcrumbs.png");
+#edit-username-button {
+    background-image: url("../images/edit-icon.svg");
     background-size: contain;
     background-repeat: no-repeat;
+    width: 13%;
 }
 
 #send-message-button {
     background-image: url("../images/send-icon.png");
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-#chat-body {
-    top: 12%;
-    max-height: 79%;
-    padding-bottom: .5em;
 }
 
 #message-text-area::placeholder {

@@ -18,18 +18,20 @@
 <body>
 <div class="d-flex flex-column justify-content-start align-items-center container-fluid px-0" id="chat-box">
     <div class="row container-fluid position-absolute top-0 py-3 px-5 rounded-3 m-0 shadow" id="chat-header">
-        <div class="col col-1 d-flex align-items-center justify-content-center">
+        <div class="col col-1 d-flex align-items-center justify-content-center p-0">
             <img src="../../assets/images/header-icon-white.jpg" id="chat-logo" style="width: 45%"/>
         </div>
-        <div class="col fs-6 text-white d-flex justify-content-start align-items-center m-0" id="chat-title">
-            Chat Room
+        <div class="col d-flex justify-content-start align-items-center p-0" id="chat-title">
+            <h5 class="text-white m-0 d-inline" id="receiver-display"></h5>
         </div>
-        <!--@Kelompok 1 PemWeb E Semester Genap 2023/2024-->
-        <div class="col col-1 d-flex justify-content-end">
-            <button type="button" id="breadcrumbs-container" class="btn btn-sm p-1"></button>
+        <div class="col col-3 d-flex justify-content-end p-0">
+            <div class="input-group border border-light-subtle rounded-3">
+                <input id="username-field" dir="rtl" type="text" class="form-control form-control-sm text-white m-0 bg-transparent border-0 pe-3" name="username" readonly>
+                <button type="button" id="edit-username-button" class="btn btn-sm p-0 border border-dark-subtle rounded-3"></button>
+            </div>
         </div>
     </div>
-    <div class="row position-absolute container-fluid px-3 pt-1 overflow-scroll" id="chat-body">
+    <div class="row position-absolute container-fluid px-3 overflow-scroll" id="chat-body">
         <div class="row m-0 container-fluid bg-primary" id="chat-table">
             <div class="col">
             </div>
@@ -49,7 +51,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-<script>let data = <?php echo $data ?></script>
 <script src="../../assets/js/chat.js"></script>
 <!--<script src="../../assets/js/settings.js"></script>-->
 </body>

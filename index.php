@@ -1,5 +1,5 @@
 <?php
-$c = isset($_GET['c']) ? $_GET['c'] : 'Home';
+$c = isset($_GET['c']) ? $_GET['c'] : 'User';
 $m = isset($_GET['m']) ? $_GET['m'] : 'index';
 
 include_once "app/Controllers/Controller.php";

@@ -11,7 +11,7 @@ class UserModel extends Model
         $this->db = $this->getDB();
     }
 
-    function getUser($sender, $receiver)
+    function addUsersIfNotExist($sender, $receiver)
     {
         $usernames = [];
         foreach ([$sender, $receiver] as $username) {
@@ -33,5 +33,25 @@ class UserModel extends Model
             "INSERT INTO case_5.user (username) VALUES ('$username');"
         );
         return $stmt->execute();
+    }
+
+    function checkUser($username)
+    {
+        $query = $this->db->prepare(
+            "SELECT * FROM case_5.user WHERE username = '$username'"
+        );
+        $query->execute();
+        return $query->get_result()->num_rows == 1;
+    }
+
+    function updateUser($username, $newUsername) {
+        $usernameExist = $this->checkUser($newUsername);
+        if (!$usernameExist) {
+            $query = $this->db->prepare(
+                "UPDATE case_5.user SET username = '$newUsername' WHERE username = '$username';"
+            );
+            return $query->execute();
+        }
+        return false;
     }
 }

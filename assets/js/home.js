@@ -15,7 +15,7 @@ fabUsername.addEventListener("click", (e) => {
         fabUsername.style.boxShadow = "0px 0px 5px blue"
         fabUsername.style.opacity = "70%";
         if (chatBox.style.width === "95%") {
-            fabUsername.style.translate = "0 -3em";
+            fabUsername.style.translate = "2.25em -28.25em";
         }
     }
 });
