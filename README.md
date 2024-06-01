@@ -1,5 +1,5 @@
-# case-2-ajax
-Repositori _case study_ tentang AJAX untuk mata kuliah Pemrograman Web.
+# case-5-mvc-mysql
+Repositori _case study_ tentang _Model View Controller_(MVC) dan _database_ (MySQL) dan untuk mata kuliah Pemrograman Web.
 
 ### WARNING
 Beberapa fitur seperti foto profil dan perekaman ke dalam file txt tidak akan bisa berjalan karena batasan dari GitHub. Seluruh kode harus diunduh untuk mencoba keseluruhan fitur website.
@@ -13,4 +13,4 @@ Beberapa fitur seperti foto profil dan perekaman ke dalam file txt tidak akan bi
 5. Klik tombol "Enter" pada keyboard untuk mengirimkan permintaan perubahan username dan username baru. Jika username baru belum ada dalam database user, maka username lama diperbarui dengan username baru. Sebaliknya, username tidak akan diubah dan sebuah alert pemberitahuan akan muncul untuk memberitahu bahwa username baru tidak bisa digunakan.
 
 ### Alur
-index.php -> Controller -> Model (jika perlu) -> View
+index.php -> Controller (sesuai parameter c dengan method sesuai parameter m dalam GET request. Jika tidak ada, controller-nya "User" dengan method "index") -> Model (jika perlu) -> View
