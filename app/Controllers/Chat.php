@@ -20,7 +20,6 @@ class Chat extends Controller
 
     function addChat()
     {
-        var_dump($this->data);
         $this->chatModel->add($this->data);
     }
 
