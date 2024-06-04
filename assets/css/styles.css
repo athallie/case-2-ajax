@@ -4,13 +4,21 @@
     margin: 0;
 }
 
+/*Hide Scrollbar*/
+#chat-body, #message-text-area {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+#chat-body::-webkit-scrollbar, #message-text-area::-webkit-scrollbar {
+    display: none;
+}
+
 #main-container {
     background-color: #9BDBFF;
 }
 
 #main-iframe {
     opacity: 0;
-    /*right: 4em;*/
     transition: 1s;
     height: 90%;
     width: 25%;
